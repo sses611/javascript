@@ -35,5 +35,30 @@
     </script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">
+              document.write(true || false); // true
+              document.write(true || true); // true
+              document.write("string" || true); // string
+              document.write(true || ""); // true
+              document.write(true || "string"); // true
+              document.write(false || ""); // ""
+              document.write(false || "string"); // "string"
+              document.write(5 || 0); // 5
+              document.write(5 || -6); // 5
+              document.write(5 || false); // 5
+              document.write(null || 0); // 0
+              document.write(null || ""); // ""
+              document.write(null || false); // false
+              document.write("yes" || "no"); // "yes"
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
+
 </html>

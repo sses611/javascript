@@ -33,6 +33,31 @@
       }
  	</script>
  </head>
- <body>
- </body>
+<body>
+    <div>
+        <textarea cols = "100" rows="40">
+            document.write(true && false); // false
+            document.write(true && true); // true
+            document.write("string" && true); // true
+            document.write(true && ""); // ""
+            document.write(true && "string"); // "string"
+            document.write(false && ""); // false
+            document.write(false && "string"); // false
+            document.write(5 && 0); // 0
+            document.write(5 && -6); // -6
+            document.write(5 && false); // false
+            document.write(null && 0); // null
+            document.write(null && ""); // null
+            document.write(null && false); // null
+            document.write("yes" && "no"); // "no"
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
+</body>
+
 </html>

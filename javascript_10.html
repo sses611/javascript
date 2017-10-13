@@ -49,5 +49,43 @@
     </script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">
+            document.write(!!0); // false
+            document.write(!!1); // true
+            document.write(!!'string'); // true
+            document.write(!!'true'); // true
+            document.write(!!'false'); // true
+            document.write(!!''); // false
+            document.write(!!true); // true
+            document.write(!!false); // false
+            document.write(!!null); // false
+            document.write(!!undefined); // false
+            document.write(!!{}); // true
+            document.write(!![]); // true
+            document.write(!![1, 2, 3]); // true
+
+            document.write(!!!0); // true
+            document.write(!!!1); // false
+            document.write(!!!'string'); // false
+            document.write(!!!'true'); // false
+            document.write(!!!'false'); // false
+            document.write(!!!''); // true
+            document.write(!!!true); // false
+            document.write(!!!false); // true
+            document.write(!!!null); // true
+            document.write(!!!undefined); // true
+            document.write(!!!{}); // false
+            document.write(!!![]); // false
+            document.write(!!![1, 2, 3]); // false
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
+
 </html>

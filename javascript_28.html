@@ -22,5 +22,19 @@
     </script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">
+           document.write(age); // undefined
+           var age = 10;
+           document.write(age); // 10
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
+
 </html>

@@ -2,7 +2,7 @@
  <head><title></title>
  	<script type="text/javascript">
  				
- 	console.log = function(msg) 
+ 	document.write = function(msg) 
  	{
         var ul = document.getElementById("log");
         var li = document.createElement("li");
@@ -30,6 +30,29 @@
 	 }
  	</script>
  </head>
- <body>
- </body>
+<body>
+    <div>
+        <textarea cols = "100" rows="40">
+	    	var language = "javascript";
+	 		document.write(language[0]);
+	 		document.write(language[1]);
+	 		document.write(language[2]);
+	 		document.write(language[3]);
+
+	 		language[0] ='A';
+	 		language[0] ='B';
+	 		language[0] ='C';
+	 		language[0] ='D';
+
+	 		document.write(language); 
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
+</body>
+
 </html>
