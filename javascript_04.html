@@ -1,14 +1,30 @@
 <!DOCTYPE html5>
  <head><title></title>
  	<script type="text/javascript">
- 		var a =40;
- 		var b =30;
- 		var c =20;
- 		var d =5;
- 		var e = 10;
 
- 		var sum = (a+b-c)*d/c;
- 		console.log(sum);
+
+ 	console.log = function(msg) 
+ 	{
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() 
+    {
+        document.getElementById("run").onclick = function() 
+        {
+ 		var a =40;
+	 		var b =30;
+	 		var c =20;
+	 		var d =5;
+	 		var e = 10;
+
+	 		var sum = (a+b-c)*d/c;
+	 		console.log(sum);
+	 	}
+	 }
  	</script>
  </head>
  <body>

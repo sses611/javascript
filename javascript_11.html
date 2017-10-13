@@ -2,17 +2,34 @@
 <html>
 <head>
     <script type="text/javascript">
-      var greeting;
-      var time = 12;
 
-      if (time < 10) {
-          greeting = "Good morning";
-      } else if (time < 20) {
-          greeting = "Good day";
-      } else {
-          greeting = "Good evening";
+
+    console.log = function(msg) 
+    {
+          var ul = document.getElementById("log");
+          var li = document.createElement("li");
+          li.appendChild(document.createTextNode(msg));
+          ul.appendChild(li);
       }
-      console.log(greeting);
+
+      window.onload = function() 
+      {
+          document.getElementById("run").onclick = function() 
+          {
+              var greeting;
+              var time = 12;
+
+              if (time < 10) {
+                  greeting = "Good morning";
+              } else if (time < 20) {
+                  greeting = "Good day";
+              } else {
+                  greeting = "Good evening";
+              }
+              console.log(greeting);
+          }
+
+      }
     </script>
 </head>
 <body>
